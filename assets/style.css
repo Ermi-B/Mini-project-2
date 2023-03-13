@@ -1,0 +1,130 @@
+:root{
+    --light: #fff;
+    --background:linear-gradient(1deg,rgb(181, 86, 216) 30%,rgb(50, 46, 46));
+    --pink: rgb(198, 95, 227);
+}
+
+body{
+    background-color: rgb(66, 64, 64);
+    padding: 5% 20%;
+    
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.title{ 
+    color: var(--pink);
+    font-size: 150%;
+}
+
+.description p{
+    color: var(--light);    
+    font-size: 120%;   
+    text-align: center;
+}
+
+.card{
+    color: var(--pink);
+    border: 1px dashed white;
+    width: 28%; /*inorder to fit 3 cards in one row*/
+    z-index:1;   
+    padding: 1%;
+    margin: 1%;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+}
+
+
+.linear-gradient-background{
+    background-image: linear-gradient(
+        rgba(232,102,236,0.3) 0%,
+        rgba(232,102,236,0.6) 100%
+    );
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    
+}
+.justify-content-center{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer{
+    color: var(--pink);
+    font-size: 150%;
+}
+.heart::after{
+    margin: 3px;
+    color: red;
+    content: '\2665';
+}
+/*styling to child elements of card*/
+
+.card header{
+    border: 1px solid var(--light);
+    border-radius: 8px;
+    width: 90%;
+    height: fit-content;
+    position: relative;
+    margin-top: -20px;
+    z-index: 2;
+    background-color: rgb(66, 64, 64);
+}
+
+.card header h2{
+    padding: 0%;
+    margin: 0%;
+}
+
+.code-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+.code-card pre{
+    user-select: all;
+    color: white;
+    padding: 5%;
+}
+
+/*Media query*/
+@media screen and (min-width:992px) {
+    /*Desktop*/
+   .card{
+    width: 28%;
+   }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    /*Desktop*/
+   .card{
+    width: 45%;
+   }
+}
+
+@media screen and (max-width:767px) {
+    /*Desktop*/
+   .card{
+    width: 94%;
+   }
+}
